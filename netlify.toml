@@ -1,0 +1,16 @@
+[build]
+  command = "pnpm install && pnpm run build"
+  publish = "build/client"
+
+[build.environment]
+  NODE_VERSION = "18.18.0"
+  NPM_FLAGS = "--version"
+
+[dev]
+  command = "pnpm run dev"
+  port = 3000
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
